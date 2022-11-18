@@ -8,7 +8,8 @@
    <title>Authorization</title>
 </head>
 <body>
-   <img class="img" src="img/avatar.png" alt="Не прогрузилось...">
+   <img class="img" src="img/pngtree-black-avatar.png" alt="Не прогрузилось...">
+<form action="index.html" method="post"> <!-- Создание формы. Используется для отправки значений полей формы -->
    <ul class="authentication">  <!-- Регистрация -->
       <p class="text">Ваш адрес электронной почты</p>
       <li> <!-- Почта -->
@@ -19,14 +20,17 @@
       <li> <!-- Пароль -->
          <input type="password" placeholder="Пароль">
       </li> 
+      <li>
+         <input class="date" type="date" name="date">
+      </li>
       <li class="checkbox">
-         <input class="checkbox" type="checkbox" checked="checked" name="remember"><span>Запомнить меня</span> 
+         <input class="checkbox" type="checkbox" checked="checked" name="remember"><span class="text">Запомнить меня</span> 
       </li>
       <br>
-
       <li> <!-- Кнопка -->
          <input id="submit" type="submit" value="Зарегистрироваться">
       </li> 
    </ul>
+</form>
 </body>
-</html>
+</html> 
