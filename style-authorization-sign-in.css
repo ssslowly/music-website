@@ -12,8 +12,11 @@ body {
   height: 150px;
 }
 li input {
+  border: 2px rgb(35, 35, 35);
+  border-style: solid;
+  /* box-shadow: 0 3px rgb(255, 255, 255); */
   border-width: 3px;
-  color: rgb(106, 117, 117);
+  color: rgb(117, 117, 117);
   padding: 5px 5px;
   margin: 0 auto;
   display: table;
@@ -62,6 +65,7 @@ li input {
 }
 .submit {
   width: 200px;
+  height: 40px;
 }
 .submit:hover {
   cursor: pointer;

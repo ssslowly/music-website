@@ -1,22 +1,111 @@
 body {
+  background-color: black; /* цвет фона */
+  background-image: url(img/wallpaper2.jpg); /* картинка для фона */
+  background-repeat: no-repeat; /* чтобы картинка не повторялась */
+  background-position: 17% 30%; /* позиционирование фонового изображения в процентах относительно элемента. 1-ось X, 2-ось Y */
   margin: 0;
-  padding: 5px;
+  padding: 0;
 }
 .nav {
-  list-style-type: none;
+  /* list-style-type: none; */
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 3%;
+  background-color: rgb(20, 20, 20);
+  /* border-radius: 3%; */
 }
 li a {
+  /* box-shadow: 0 3px rgb(50, 50, 50) inset; */
+  border: 2px rgb(42, 42, 42);
+  border-style: solid;
   display: block;
   color: rgb(235, 235, 235);
   padding: 8px 16px;
   text-decoration: none;
 }
 li a:hover {
-  background-color: #555;
+  background-color: rgb(0, 0, 0);
   color: white;
+}
+
+.music {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.35s linear;
+}
+
+.music {
+  justify-content: center;
+  align-items: center;
+  min-height: 10px;
+  color: white;
+}
+
+.player {
+  
+
+  
+
+  border: 2px rgb(255, 255, 255);
+  border-style: solid;
+  width: 640px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  grid-gap: 16px;
+  padding: 8px 24px;
+  /* position: relative; */
+  border-radius: 5px;
+}
+
+.control,#current {
+  /* height: 100%; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* padding-block: 16px; */
+}
+
+#playbtn {
+  font-size: 24px;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  cursor: pointer;
+}
+
+#playbtn:hover {
+  -webkit-text-fill-color: white;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+#current {
+  text-align: right;
+}
+
+.bar {
+  --space: -4px;
+  background-color: #24242424;
+  /* overflow: hidden; */
+  left: var(--space);
+  right: var(--space);
+  top: var(--space);
+  bottom: var(--space);
+  position: absolute;
+  border-radius: 15px;
+  z-index: -2;
+}
+#progress {
+  /* display: block; */
+  width: var(--progress,0%);
+  background-color: white;
+  transition: all 1s linear;
+  height: 100%;
 }
