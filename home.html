@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="player.js">
+    <link rel="stylesheet" href="player.js" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="main.js" />
     <link
@@ -17,28 +17,29 @@
     <title>Home</title>
   </head>
   <body>
-    <ul class="nav">
-      <li><a href="home.html">Главная</a></li>
-      <li><a href="media-library.html">Моя медиатека</a></li>
-      <li><a href="search.html">Поиск</a></li>
-    </ul>
+    <header>
+      <nav>
+        <a href="home.html">Главная</a>
+        <a href="media-library.html">Моя медиатека</a>
+        <a href="search.html">Поиск</a>
+      </nav>
+    </header>
     <div class="music">
-      <div class="player">
-        <div class="bar">
-          <div id="progress"></div>
-        </div>
-     <audio id="player" src="music/plenka - Call Me (Slowed).mp3"></audio>
-
-      <div class="control">
-        <i class="fas fa-play" id="playbtn"></i>
-      </div>
-      <div class="info">
-        plenka - Call Me (Slowed)  
-
-      </div>
-      <div id="current">0:00</div>
-    </div>
       <script src="player.js"></script>
+      <audio
+        id="audio"
+        src="music/Mareux - The Perfect Girl.mp3"
+        controls
+      ></audio>
+      <div id="controls">
+        <div class="audio-track">
+          <div class="time"></div>
+        </div>
+        <button class="play">Play</button>
+        <button class="pause">Pause</button>
+        <button class="prev">&#60;prev</button>
+        <button class="next">next&#62;</button>
+      </div>
     </div>
   </body>
 </html>
