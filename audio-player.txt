@@ -1,0 +1,123 @@
+<div class="music">
+      <div class="player">
+        <div class="bar">
+          <div id="progress"></div>
+        </div>
+        <audio id="player" src="music/plenka - Call Me (Slowed).mp3"></audio>
+        <div class="control">
+          <i class="fas fa-play" id="playbtn"></i>
+        </div>
+        <div class="info">plenka - Call Me (Slowed)</div>
+        <div id="current">0:00-</div>
+      </div>
+      <script src="player.js"></script>
+    </div>
+    <!-- <div class="music">
+    <div class="player">
+      <div class="bar">
+        <div id="progress"></div>
+      </div>
+      <audio id="player" src="music/Mareux - The Perfect Girl.mp3"></audio>
+      <div class="control">
+        <i class="fas fa-play" id="playbtn"></i>
+      </div>
+      <div class="info">Mareux - The Perfect Girl</div>
+      <div id="current">0:00</div>
+    </div>
+    <script src="player.js"></script>
+  </div> -->
+
+
+.music {
+  font-family: sans-serif; /* шрифт текста в блоке */
+  letter-spacing: 1px; /* растянуть тексты в блоке */
+  color: white; /* цвет текста и таймера в блоке */
+}
+
+.player {
+  border: 2px rgb(255, 255, 255); /* цвет границы блока */
+  border-style: solid; /* со всех сторон цвет границы блока */
+  width: 50%; /* размеры блока */
+  height: 30px; /* размеры блока */
+  display: grid; /* задает тип элементов */
+  grid-template-columns: 48px 1fr 48px; /* элементы в блок */
+  padding: 8px 50px; /* размеры границы блока */
+  border-radius: 5px; /* граница блока */
+  margin: 0 auto; /* передвинуть в центр */
+}
+
+.control,#current {
+  display: flex; /* тип контроля и таймера в блоке */
+  align-items: center; /* в центр блока */
+}
+
+#playbtn { /* кнопка плейера */
+  font-size: 24px; /* размер */
+  color: transparent; /* цвет */
+  -webkit-text-stroke-width: 1px; /* размер границы плейера */
+  -webkit-text-stroke-color: white; /* цвет границы плейера */
+  cursor: pointer; /* вид курсора при взаимодействии с элементом */
+}
+
+#playbtn:hover {
+  -webkit-text-fill-color: white; /* меняется цвет при взаимодействии с курсором */
+}
+
+.info {
+  display: flex; /* задает тип текста в блоке */
+  justify-content: center; /* двигает текст в центр по оси x */
+  align-items: center; /* двигает текст в центр по оси y */
+  font-size: 14px; /* размер текста в блоке */
+}
+
+.bar {
+  position: absolute; /* позиционирование элемента. Элемент удаляется из обычного потока документа и становится выше всех других элементов обычного потока. */
+}
+
+
+
+var player = document.getElementById("player");
+let progress = document.getElementById("progress");
+let playbtn = document.getElementById("playbtn");
+
+var playpause = function () {
+  if (player.paused) {
+    player.play();
+  } else {
+    player.pause();
+  }
+}
+
+playbtn.addEventListener("click", playpause);
+
+player.onplay = function () {
+  playbtn.classList.remove("fa-play");
+  playbtn.classList.add("fa-pause");
+}
+
+player.onpause = function () {
+  playbtn.classList.add("fa-play");
+  playbtn.classList.remove("fa-pause");
+}
+
+player.ontimeupdate = function () {
+  let ct = player.currentTime;
+  current.innerHTML = timeFormat(ct);
+}
+
+function timeFormat(ct) {
+  hour = Math.floor(ct / 60 % 60);
+  minutes = Math.floor(ct / 60);
+  seconds = Math.floor(ct % 60);
+
+  if (seconds < 10) { // типо 01 02, а не 1 2 
+    seconds = "0" + seconds;
+  }
+
+  if (minutes > 59) {
+    return hour + ":" + minutes + ":" + seconds;
+  }
+  else {
+    return minutes + ":" + seconds;
+  }
+}
