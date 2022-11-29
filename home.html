@@ -24,21 +24,20 @@
         <a href="search.html">Поиск</a>
       </nav>
     </header>
-    <div class="music">
-      <script src="player.js"></script>
-      <audio
-        id="audio"
-        src="music/Mareux - The Perfect Girl.mp3"
-        controls
-      ></audio>
-      <div id="controls">
-        <div class="audio-track">
-          <div class="time"></div>
+    <div class="wrapper">
+      <div class="player">
+        <div class="title">Сейчас играет</div>
+        <div class="cover"><img class="cover_img" src="img/cover1.png" alt="cover"></div>
+        <div class="song">plenka - Call Me (Slowed)</div>
+        <audio class="audio" src="music/plenka - Call Me (Slowed).mp3"></audio>
+        <div class="progress_container">
+          <div class="progress"></div>
         </div>
-        <button class="play">Play</button>
-        <button class="pause">Pause</button>
-        <button class="prev">&#60;prev</button>
-        <button class="next">next&#62;</button>
+        <div class="buttons">
+          <div class="btn prev"><img id="buttons" src="img/prev-button.png" alt="btn"></div>
+          <div class="btn play"><img id="buttons" class="img_src" src="img/play-button.png" alt="btn"></div>
+          <div class="btn next"><img id="buttons" src="img/next-button.png" alt="btn"></div>
+        </div>
       </div>
     </div>
   </body>
