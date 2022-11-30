@@ -6,9 +6,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
 header {
   width: 200px;
 }
+
 a {
   border: 2px rgb(255, 255, 255);
   border-style: solid;
@@ -39,6 +41,7 @@ a:hover {
   /* border-radius: 0px; */
   border: 2px rgb(255, 255, 255);
 }
+
 .title {
   font-style: normal;
   font-weight: 400;
@@ -47,11 +50,19 @@ a:hover {
   text-align: center;
   color: rgb(255, 255, 255);
 }
+
 .cover {
   display: flex;
   justify-content: center;
   margin: 25px 0;
 }
+
+.cover_img {
+}
+.active {
+  animation: rotateAnimation 3s linear infinite;
+}
+
 .song {
   font-style: normal;
   font-weight: bold;
@@ -59,6 +70,7 @@ a:hover {
   line-height: 28px;
   color: rgb(255, 255, 255);
 }
+
 .progress_container {
   background: rgba(255, 255, 255, 0.31);
   border-radius: 5px;
@@ -68,14 +80,15 @@ a:hover {
   display: flex;
   align-items: center;
   cursor: pointer;
-  
 }
+
 .progress{
     background: rgb(255, 0, 0);
     border-radius: 5px;
     height: 6px;
     width: 150px;
 }
+
 .buttons{
   display: flex;
   justify-content: space-between;
@@ -85,8 +98,22 @@ a:hover {
   margin: 0 auto;
   margin-top: 45px;
 }
+
+.btn{
+    cursor: pointer;
+}
+
 #buttons {
   width: 50px;
   height: 50px;
   object-fit: cover;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

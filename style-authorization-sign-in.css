@@ -5,12 +5,14 @@ body {
   background-repeat: no-repeat; /* чтобы картинка не повторялась */
   background-position: 17% 30%; /* позиционирование фонового изображения в процентах относительно элемента. 1-ось X, 2-ось Y */
 }
+
 .img {
   margin: 0 auto 50px;
   display: flex;
   width: 150px;
   height: 150px;
 }
+
 li input {
   border: 2px rgb(35, 35, 35);
   border-style: solid;
@@ -23,6 +25,7 @@ li input {
   justify-content: center; /* Чтобы контент сдвинуть в центр */
   background-color: rgb(50, 50, 50);
 }
+
 .text {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -33,11 +36,13 @@ li input {
   padding-bottom: 2px;
   margin: 0;
 }
+
 .authentication {
   padding: 0; /* Изначально слева 40px */
   /* list-style-type: none; Чтобы убрать значки список */
   margin: 0; /* Изначально сверху 16px */
 }
+
 .email {
   width: 160px;
 }
@@ -47,6 +52,7 @@ li input {
 .date {
   margin: 0 auto;
 }
+
 .checkbox {
   padding: 10px 0 0 0;
   color: black;
@@ -54,6 +60,7 @@ li input {
   display: flex;
   justify-content: center;
 }
+
 .checktext {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -63,10 +70,12 @@ li input {
   padding-top: 0;
   margin: 0 5px;
 }
+
 .submit {
   width: 200px;
   height: 40px;
 }
+
 .submit:hover {
   cursor: pointer;
   color: rgb(255, 255, 255);
